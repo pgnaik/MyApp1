@@ -25,7 +25,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>src.main.java.HelloJava</mainClass> <!-- Specify your main class here -->
+              <mainClass>src.main.java.Hello</mainClass> <!-- Specify your main class here -->
             </manifest>
           </archive>
         </configuration>
