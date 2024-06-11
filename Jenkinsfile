@@ -9,10 +9,14 @@ pipeline{
         stage('Build Maven') {
             steps{
                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/pgnaik/MyApp1.git']])
-                bat "mvn clean package"
-                
+                bat "mvn clean package"        
             }
         }
+     stage('Execute JAR') {
+            steps {
+                bat "java -jar target/MyApp.jar"
+            }
+        }   
     }
 }
 
